@@ -11,5 +11,11 @@ const gameBoard = (() => {
     }
   };
 
-  createGameBoard();
+  const resetGameBoard = () => {
+    for (let i = 0; i < 9; i++) {
+      board.children[i].textContent = "";
+    }
+  };
+
+  return { createGameBoard, resetGameBoard };
 })();
